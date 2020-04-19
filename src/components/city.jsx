@@ -12,7 +12,7 @@ const cities = [
 const City = (props) => {
   return (
     <div className="cities">
-      {this.props.name}
+      {props.name}
     </div>
   );
 };
