@@ -5,7 +5,7 @@ import React from 'react';
 
 const City = (props) => {
   return (
-    <div className="app active-city">
+    <div className="cities">
       {props.name}
     </div>
   );
