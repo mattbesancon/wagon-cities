@@ -3,6 +3,10 @@
 
 import React from 'react';
 
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+import { selectCity } from '../actions';
+
 const City = (props) => {
   return (
     <div className="cities">
@@ -11,4 +15,17 @@ const City = (props) => {
   );
 };
 
-export default City;
+function mapStateToProps(state) {
+  return {
+    selectedCity: state.selectedCity
+  };
+}
+
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators(
+    { selectCity },
+    dispatch
+  );
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(City);
