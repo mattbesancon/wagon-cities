@@ -7,6 +7,7 @@ import City from './city';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { setCities } from '../actions';
+
 class CityList extends Component {
   componentWillMount() {
     this.props.setCities();
@@ -36,7 +37,7 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
   return bindActionCreators(
-    { setCities: setCities },
+    { setCities },
     dispatch
   );
 }
