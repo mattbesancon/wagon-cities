@@ -6,16 +6,16 @@ import React, {Component} from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
-import { selectCity } from '..actions/select_city';
+import { selectCity } from '../actions/select_city';
 
 class City extends Component {
-  render() (
+  render() {
     return (
       <div className="cities">
         {props.name}
       </div>
     );
-  );
+  };
 } 
 
 function mapStateToProps(state) {
