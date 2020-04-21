@@ -1,7 +1,7 @@
 /* eslint jsx-a11y/alt-text: off */
 /* eslint jsx-a11y/no-noninteractive-element-interactions: off */
 
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
@@ -15,7 +15,7 @@ class City extends Component {
         {props.name}
       </div>
     );
-  };
+  }
 } 
 
 function mapStateToProps(state) {

@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore, combineReducers } from 'redux';
 import citiesReducer from './reducers/cities_reducer';
-
+import selectCityReducer from './reducers/select_city_reducer';
 // internal modules
 import App from './components/app';
 import '../assets/stylesheets/application.scss';
