@@ -6,7 +6,7 @@ import City from './city';
 
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import { setCities } from '../actions';
+import { setCities } from '../actions/index';
 
 class CityList extends Component {
   componentWillMount() {
