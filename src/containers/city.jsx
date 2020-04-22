@@ -1,33 +1,17 @@
-/* eslint jsx-a11y/alt-text: off */
-/* eslint jsx-a11y/no-noninteractive-element-interactions: off */
-
-import React, { Component } from 'react';
-
-import { bindActionCreators } from 'redux';
+import React from 'react';
 import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 
-import { selectCity } from '../actions/select_city';
+import selectCity from '../actions/index';
 
-class City extends Component {
-  render() {
-    return (
-      <div className="cities">
-        {props.name}
-      </div>
-    );
-  }
-} 
-
-function mapStateToProps(state) {
-  return {
-    selectedCity: state.selectedCity
-  };
-}
+const City = (props) => {
+  return (
+    <li className="list-group-item" onClick={() => props.selectCity(props.city)}>{props.city.name}</li>
+  );
+};
 
 function mapDispatchToProps(dispatch) {
-  return bindActionCreators(
-    { selectCity: selectCity },
-    dispatch);
+  return bindActionCreators({ selectCity }, dispatch);
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(City);
+export default connect(null, mapDispatchToProps)(City);
