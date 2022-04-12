@@ -1,8 +1,8 @@
 /* eslint jsx-a11y/alt-text: off */
 /* eslint jsx-a11y/no-noninteractive-element-interactions: off */
+
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
 
 import City from '../containers/city';
 
@@ -31,4 +31,3 @@ function mapStateToProps(state) {
 }
 
 export default connect(mapStateToProps)(CityList);
-
